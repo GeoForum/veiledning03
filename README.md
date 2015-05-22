@@ -26,13 +26,13 @@ Data ligger nå i rå tekst-format som i filen [qgis/data/6900_2_10m_z33.dem](qg
 
 Terrrengmodellen her er raster data i motesettning til de forrige veiledninger, hvor vi jobbet med vektor data. Raster data er som et vanlig bilde - det består av rasters / pixels som kan have en eller flere verdier. I dette tilfelle er det en verdi for hver x-y-koordinat - nemlig en z-verdi (høyde). I et vanlig foto, er det tre verdier for hver koordinat - nemlig en verdi for rød, en for grønn og en for blå. Raster data kan inneholde hvor mange verdier som helst for hver koordinat - sattelit-bilder inneholder ofte opp til 20 verdier - også kallet "band".
 
-### Rendering
+## Rendering
 
 I utgangspunktet vil QGIS vise terrengmodellen i gråfarger, men det finnes naturligvis andre kule måter å vise det på. Hvis du høyreklikker på laget og velger "duplicate" vil du få fler lag som viser til samme datakilde. Det er en grei måte å teste forskjellige måter å vise samme data på - altså forskjellige typer af kartografi - også kallet "style" eller "symbology". Kartografi lagres ikke i datakilden. Utgangspunket er greyscale:
 
 ![txt](img/350_q05a.jpg) 
 
-# Pseudocolor
+## Pseudocolor
 En måte grei kartografisk metode til dette formålet er "pseudocolor". 
 
 ![txt](img/350_q05b.jpg) ![txt](img/350_q05c.jpg)
@@ -41,23 +41,51 @@ I det andre eksemple ovenfor er valgt en fargeskala fra grønt til brun fordelt 
 
 ![txt](img/q06.png)
 
-# Hillshade
+## Hillshade
+En annen kul måte å vise terreng på er vha hillshade. 
+
 ![txt](img/350_q07b.jpg) 
 
-En annen kul måte å vise terreng på er vha hillshade. 
+Velg fra QGIS menyen "Raster > Analysis > DEM" og bruk Mode = Hillshade. Det lages en analyse av terrengmodellen med utgangspunkt i lysets retning (azimuth og altiude) mv og output er en ny geotiff fil med data for skygge. 
 
 ![txt](img/q07a.png) 
 
-Velg fra QGIS menyen "Raster > Analysis > DEM" og bruk Mode = Hhillshade. Det lages en analyse av terrengmodellen med utgangspunkt i lysets retning (azimuth og altiude) mv og output er en ny geotiff fil med data for skygge. Det ser litt rart ut vannet er farget gråt - bruk info-tool til å inspisere bildet til å bestemme hviklen verdi haveoverflaten har:
+Det ser litt rart ut vannet er farget gråt - bruk info-tool til å inspisere bildet til å bestemme hviklen verdi haveoverflaten har. Sett deretter no-data value til den verdien - prøv evt samtidig å sette global transparancy til 50%:
 
 ![txt](img/q07c.png) ![txt](img/q07d.png)
 
-Og sett deretter no-data value til 181 - prøv samtidig å sette global transparancy til 50%:
-
 ![txt](img/q07e.png)
 
-I stedet for global transparancy kan du i stedet prøve med forskjellige typer "color rendering":
+I stedet for global transparancy kan du prøve med forskjellige typer "color rendering":
 
 ![txt](img/q07f.mutiply.png)
 
 ![txt](img/350_q07g.50transp.jpg) ![txt](img/350_q07g.multiply.jpg) 
+
+## Slope og Aspect
+Det er også mulig å analysere helningen (slope) og retning (aspect) i terregnet og vise det på kartet:
+
+![txt](img/350_q08b.jpg) ![txt](img/350_q09b.jpg)
+
+Det gjøres også under "Raster > Analysis > DEM" men med bruk av annen mode:
+
+![txt](img/q10.png) 
+
+## Raster beregning
+
+Når man har forskjellige raster lag er det mulig å lage beregninger med dise ved å bruke verktøyet "Raster > Ŗaster Calculator":
+
+![txt](img/q11b.png) 
+
+I dette eksemplet finnes områder på kartet som har en retning mellem 180 og 270 grader (mellom syd og vest) og som har en helning mellom 30 og 45 grader:
+
+```sql
+"terreng, aspect 1, color@1" < 270  
+AND "terreng, aspect 1, color@1" > 180 
+AND "terreng, slope 1m, gray@1"  > 30 
+AND  "terreng, slope 1m, gray@1"  <  45
+```
+Resultat ser slik ut:
+
+![txt](img/350_q11.jpg) 
+
