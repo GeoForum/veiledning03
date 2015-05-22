@@ -2,6 +2,8 @@
 
 Vi skal lage en 3D visualisering av terrengmodell i desktop GIS. Det finnes en rekke avanserte GIS platforme til desktop. Tidligere har ESRI dominert markedet med [ArcGIS](http://www.esri.com/software/arcgis) - [MapInfo](http://www.mapinfo.com/) er også stor. Etterhvert har Open Source alternativene vokst seg store - blant de mest populære er [Quantum GIS / QGIS](http://www.qgis.org/en) og [GRASS GIS](http://grass.osgeo.org/).
 
+Du kan hente [filene til denne veiledning på github](https://github.com/GeoForum/veiledning03) - eller du kan bygge strukturen opp selv.
+
 ## QGIS og data
 Gå til http://www.qgis.org/en/site/forusers/download.html, last ned og installer QGIS. Det finnes til både Linux, Mac og Windows.
 
@@ -10,4 +12,52 @@ http://data.kartverket.no/download/content/digital-terrengmodell-10-m-utm-33
 
 For å laste ned fra Kartverket, må du først [opprette ny bruker](http://data.kartverket.no/download/user/register) og logge inn. Velg de områder du ønsker terrengmodell for og klikk på "Legg i kurv > Se kurven > Bestill > laste ned filene her > Download" og du kan nå lagre data som DEM fil (xyz text koordinater), ligger her som [qgis/data/6900_2_10m_z33.dem](qgis/data/6900_2_10m_z33.dem).
 
-![kv](img/kv01.png)
+![txt](img/kv01.png)
+
+Pakk ut zip-filen og legg den til i QGIS som "raster layer". Du vil se, at QGIS ofte selv oppdager projeksjon og koordinater - i dette tilfelle EPSG:32633 - se bilde nedenfor. Hvis du ønsker kan du bruke prosjekt-filen [qgis/veiledning03a.qgs](qgis/veiledning03a.qgs) og åpne den med QGIS.
+
+![txt](img/q04.png) ![txt](img/q03.png)
+
+Data ligger nå i rå tekst-format som i filen [qgis/data/6900_2_10m_z33.dem](qgis/data/6900_2_10m_z33.dem). For bedre performance, er det lurt å konvertere til en binært format som fx geotiff:
+
+![txt](img/q01.png) ![txt](img/q02.png)
+
+## Raster data
+
+Terrrengmodellen her er raster data i motesettning til de forrige veiledninger, hvor vi jobbet med vektor data. Raster data er som et vanlig bilde - det består av rasters / pixels som kan have en eller flere verdier. I dette tilfelle er det en verdi for hver x-y-koordinat - nemlig en z-verdi (høyde). I et vanlig foto, er det tre verdier for hver koordinat - nemlig en verdi for rød, en for grønn og en for blå. Raster data kan inneholde hvor mange verdier som helst for hver koordinat - sattelit-bilder inneholder ofte opp til 20 verdier - også kallet "band".
+
+### Rendering
+
+I utgangspunktet vil QGIS vise terrengmodellen i gråfarger, men det finnes naturligvis andre kule måter å vise det på. Hvis du høyreklikker på laget og velger "duplicate" vil du få fler lag som viser til samme datakilde. Det er en grei måte å teste forskjellige måter å vise samme data på - altså forskjellige typer af kartografi - også kallet "style" eller "symbology". Kartografi lagres ikke i datakilden. Utgangspunket er greyscale:
+
+![txt](img/350_q05a.jpg) 
+
+# Pseudocolor
+En måte grei kartografisk metode til dette formålet er "pseudocolor". 
+
+![txt](img/350_q05b.jpg) ![txt](img/350_q05c.jpg)
+
+I det andre eksemple ovenfor er valgt en fargeskala fra grønt til brun fordelt på 16 intervaller fra 1-1600 meter over havet - i tillegg er en klasse lagt til manuellt med blå-farge for havet. Brukersnittet få frem ved å høyreklikke på laget og velge "properties" og "style":
+
+![txt](img/q06.png)
+
+# Hillshade
+![txt](img/350_q07b.jpg) 
+
+En annen kul måte å vise terreng på er vha hillshade. 
+
+![txt](img/q07a.png) 
+
+Velg fra QGIS menyen "Raster > Analysis > DEM" og bruk Mode = Hhillshade. Det lages en analyse av terrengmodellen med utgangspunkt i lysets retning (azimuth og altiude) mv og output er en ny geotiff fil med data for skygge. Det ser litt rart ut vannet er farget gråt - bruk info-tool til å inspisere bildet til å bestemme hviklen verdi haveoverflaten har:
+
+![txt](img/q07c.png) ![txt](img/q07d.png)
+
+Og sett deretter no-data value til 181 - prøv samtidig å sette global transparancy til 50%:
+
+![txt](img/q07e.png)
+
+I stedet for global transparancy kan du i stedet prøve med forskjellige typer "color rendering":
+
+![txt](img/q07f.mutiply.png)
+
+![txt](img/350_q07g.50transp.jpg) ![txt](img/350_q07g.multiply.jpg) 

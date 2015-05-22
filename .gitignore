@@ -30,3 +30,4 @@ node_modules
 img/src
 img/mogrify
 qgis/data
+*.qgs~
