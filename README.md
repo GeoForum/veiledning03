@@ -104,3 +104,17 @@ Det er lurt å lLagre bygningene i separat fil, siden performance er mye bedre p
 
 ![txt](img/q12c.png) 
 
+"Plugins > Manage and install plugins" - skriv "Qgis2ThreeJS" i søkefeltet og installer.
+
+![txt](img/q12e.png) 
+
+"Web > Qgis2ThreeJS > Qgis2ThreeJS" - velg korrekt DEM og Polygon lag til visning, sett fast højde som pygningene skal vises med:
+
+![txt](img/q12f.png) 
+
+![txt](img/q12g.png) 
+
+Klikk på "run" og 3D-modellen kan vises i nettleseren:
+
+![txt](img/q12d.png) 
+

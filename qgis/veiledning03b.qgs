@@ -6,25 +6,22 @@
     <layer-tree-layer expanded="1" checked="Qt::Checked" id="osm_buildings_0120150523134613294" name="osm_buildings_01">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" checked="Qt::Checked" id="6900_2_10m_z33_hillshade0120150522134243913" name="Terreng 2, hilllshade 1">
-      <customproperties/>
-    </layer-tree-layer>
-    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="6900_2_10m_z33_slope0120150522151124822" name="Terreng 2, slope 1m, gray">
+    <layer-tree-layer expanded="1" checked="Qt::Checked" id="6900_4_10m_z33_hillshade0120150523143001078" name="Terreng 4, hillshade">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="0" checked="Qt::Checked" id="6900_4_10m_z3320150523130358662" name="Terreng 4">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="6900_2_10m_z33_aspect0120150522151332622" name="Terreng 2, aspect 1, color">
+    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="6900_3_10m_z3320150523130045234" name="Terreng 3">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" checked="Qt::Checked" id="6900_3_10m_z3320150523130045234" name="Terreng 3">
+    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="6900_1_10m_z3320150523125034619" name="Terreng 1">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" checked="Qt::Checked" id="6900_1_10m_z3320150523125034619" name="Terreng 1">
+    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="6900_2_10m_z33_hillshade0120150522134243913" name="Terreng 2, hilllshade">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" checked="Qt::Checked" id="6900_2_10m_z33_copy20150522130612305" name="Terreng 2">
+    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="6900_2_10m_z33_copy20150522130612305" name="Terreng 2">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -32,10 +29,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>42465.56552858350187307</xmin>
-      <ymin>6956005.68791009020060301</ymin>
-      <xmax>47531.51641691223630914</xmax>
-      <ymax>6959382.76396454963833094</ymax>
+      <xmin>43207.64004729610314826</xmin>
+      <ymin>6957592.29347102157771587</ymin>
+      <xmax>45834.19074878855462885</xmax>
+      <ymax>6958469.15249406732618809</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -57,13 +54,14 @@
       <layer_coordinate_transform destAuthId="EPSG:32633" srcAuthId="EPSG:32633" srcDatumTransform="-1" destDatumTransform="-1" layerid="6900_2_10m_z3320150523125157504"/>
       <layer_coordinate_transform destAuthId="EPSG:32633" srcAuthId="EPSG:32633" srcDatumTransform="-1" destDatumTransform="-1" layerid="6900_2_10m_z3320150522153811433"/>
       <layer_coordinate_transform destAuthId="EPSG:32633" srcAuthId="EPSG:32633" srcDatumTransform="-1" destDatumTransform="-1" layerid="6900_2_10m_z33_hillshade0120150522134243913"/>
-      <layer_coordinate_transform destAuthId="EPSG:32633" srcAuthId="EPSG:32633" srcDatumTransform="-1" destDatumTransform="-1" layerid="6900_1_10m_z3320150523124122126"/>
       <layer_coordinate_transform destAuthId="EPSG:32633" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="multipolygons20150523135102018"/>
+      <layer_coordinate_transform destAuthId="EPSG:32633" srcAuthId="EPSG:32633" srcDatumTransform="-1" destDatumTransform="-1" layerid="6900_1_10m_z3320150523124122126"/>
       <layer_coordinate_transform destAuthId="EPSG:32633" srcAuthId="EPSG:32633" srcDatumTransform="-1" destDatumTransform="-1" layerid="6900_2_10m_z3320150522113345623"/>
       <layer_coordinate_transform destAuthId="EPSG:32633" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="points20150523003458545"/>
       <layer_coordinate_transform destAuthId="EPSG:32633" srcAuthId="EPSG:32633" srcDatumTransform="-1" destDatumTransform="-1" layerid="osm_buildings_0120150523135319394"/>
       <layer_coordinate_transform destAuthId="EPSG:32633" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="lines20150523003458781"/>
       <layer_coordinate_transform destAuthId="EPSG:32633" srcAuthId="EPSG:32633" srcDatumTransform="-1" destDatumTransform="-1" layerid="6900_2_10m_z33_copy_copy20150522130626896"/>
+      <layer_coordinate_transform destAuthId="EPSG:32633" srcAuthId="EPSG:32633" srcDatumTransform="-1" destDatumTransform="-1" layerid="6900_4_10m_z33_hillshade0120150523143001078"/>
       <layer_coordinate_transform destAuthId="EPSG:32633" srcAuthId="EPSG:32633" srcDatumTransform="-1" destDatumTransform="-1" layerid="6900_3_10m_z3320150523130045234"/>
       <layer_coordinate_transform destAuthId="EPSG:32633" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="other_relations20150523003459571"/>
       <layer_coordinate_transform destAuthId="EPSG:32633" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="multipolygons20150523003459294"/>
@@ -79,13 +77,12 @@
   <layer-tree-canvas>
     <custom-order enabled="0">
       <item>6900_2_10m_z33_hillshade0120150522134243913</item>
-      <item>6900_2_10m_z33_slope0120150522151124822</item>
-      <item>6900_2_10m_z33_aspect0120150522151332622</item>
       <item>6900_2_10m_z33_copy20150522130612305</item>
       <item>6900_1_10m_z3320150523125034619</item>
       <item>6900_3_10m_z3320150523130045234</item>
       <item>6900_4_10m_z3320150523130358662</item>
       <item>osm_buildings_0120150523134613294</item>
+      <item>6900_4_10m_z33_hillshade0120150523143001078</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
@@ -94,14 +91,9 @@
         <legendlayerfile isInOverview="0" layerid="osm_buildings_0120150523134613294" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Terreng 2, hilllshade 1" showFeatureCount="0">
-      <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="6900_2_10m_z33_hillshade0120150522134243913" visible="1"/>
-      </filegroup>
-    </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Terreng 2, slope 1m, gray" showFeatureCount="0">
-      <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="6900_2_10m_z33_slope0120150522151124822" visible="0"/>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Terreng 4, hillshade" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="6900_4_10m_z33_hillshade0120150523143001078" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Terreng 4" showFeatureCount="0">
@@ -109,28 +101,28 @@
         <legendlayerfile isInOverview="0" layerid="6900_4_10m_z3320150523130358662" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Terreng 2, aspect 1, color" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Terreng 3" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="6900_2_10m_z33_aspect0120150522151332622" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="6900_3_10m_z3320150523130045234" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Terreng 3" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Terreng 1" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="6900_3_10m_z3320150523130045234" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="6900_1_10m_z3320150523125034619" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Terreng 1" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Terreng 2, hilllshade" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="6900_1_10m_z3320150523125034619" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="6900_2_10m_z33_hillshade0120150522134243913" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Terreng 2" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Terreng 2" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="6900_2_10m_z33_copy20150522130612305" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="6900_2_10m_z33_copy20150522130612305" visible="0"/>
       </filegroup>
     </legendlayer>
   </legend>
-  <projectlayers layercount="8">
+  <projectlayers layercount="7">
     <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <id>6900_1_10m_z3320150523125034619</id>
       <datasource>./data/6900_1_10m_z33.gtiff</datasource>
@@ -184,88 +176,6 @@
               <item alpha="255" value="1300" label="1300.000000" color="#c4944e"/>
               <item alpha="255" value="1400" label="1400.000000" color="#b57a34"/>
               <item alpha="255" value="1500" label="1500.000000" color="#a6611a"/>
-            </colorrampshader>
-          </rastershader>
-        </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-      <id>6900_2_10m_z33_aspect0120150522151332622</id>
-      <datasource>./data/6900_2_10m_z33.aspect01.gtiff</datasource>
-      <title></title>
-      <abstract></abstract>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>Terreng 2, aspect 1, color</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=utm +zone=33 +datum=WGS84 +units=m +no_defs</proj4>
-          <srsid>3117</srsid>
-          <srid>32633</srid>
-          <authid>EPSG:32633</authid>
-          <description>WGS 84 / UTM zone 33N</description>
-          <projectionacronym>utm</projectionacronym>
-          <ellipsoidacronym>WGS84</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <customproperties>
-        <property key="identify/format" value="Value"/>
-      </customproperties>
-      <provider>gdal</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
-      </noData>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer opacity="1" alphaBand="0" classificationMax="360" classificationMinMaxOrigin="User" band="1" classificationMin="0" type="singlebandpseudocolor">
-          <rasterTransparency/>
-          <rastershader>
-            <colorrampshader colorRampType="INTERPOLATED" clip="0">
-              <item alpha="255" value="0" label="0.000000" color="#d7191c"/>
-              <item alpha="255" value="10" label="10.000000" color="#db2923"/>
-              <item alpha="255" value="20" label="20.000000" color="#df3a2b"/>
-              <item alpha="255" value="30" label="30.000000" color="#e34a33"/>
-              <item alpha="255" value="40" label="40.000000" color="#e75b3a"/>
-              <item alpha="255" value="50" label="50.000000" color="#ec6b42"/>
-              <item alpha="255" value="60" label="60.000000" color="#f07c4a"/>
-              <item alpha="255" value="70" label="70.000000" color="#f48c51"/>
-              <item alpha="255" value="80" label="80.000000" color="#f89d59"/>
-              <item alpha="255" value="90" label="90.000000" color="#fdae61"/>
-              <item alpha="255" value="100" label="100.000000" color="#fdb76b"/>
-              <item alpha="255" value="110" label="110.000000" color="#fdc075"/>
-              <item alpha="255" value="120" label="120.000000" color="#fdc980"/>
-              <item alpha="255" value="130" label="130.000000" color="#fdd28a"/>
-              <item alpha="255" value="140" label="140.000000" color="#fedb95"/>
-              <item alpha="255" value="150" label="150.000000" color="#fee49f"/>
-              <item alpha="255" value="160" label="160.000000" color="#feedaa"/>
-              <item alpha="255" value="170" label="170.000000" color="#fef6b4"/>
-              <item alpha="255" value="180" label="180.000000" color="#ffffbf"/>
-              <item alpha="255" value="190" label="190.000000" color="#f5fbbc"/>
-              <item alpha="255" value="200" label="200.000000" color="#ecf7b9"/>
-              <item alpha="255" value="210" label="210.000000" color="#e3f3b6"/>
-              <item alpha="255" value="220" label="220.000000" color="#d9efb3"/>
-              <item alpha="255" value="230" label="230.000000" color="#d0ecb0"/>
-              <item alpha="255" value="240" label="240.000000" color="#c7e8ad"/>
-              <item alpha="255" value="250" label="250.000000" color="#bde4aa"/>
-              <item alpha="255" value="260" label="260.000000" color="#b4e0a7"/>
-              <item alpha="255" value="270" label="270.000000" color="#abdda4"/>
-              <item alpha="255" value="280" label="280.000000" color="#9cd3a6"/>
-              <item alpha="255" value="290" label="290.000000" color="#8ec9a8"/>
-              <item alpha="255" value="300" label="300.000000" color="#80bfab"/>
-              <item alpha="255" value="310" label="310.000000" color="#72b5ad"/>
-              <item alpha="255" value="320" label="320.000000" color="#63abb0"/>
-              <item alpha="255" value="330" label="330.000000" color="#55a1b2"/>
-              <item alpha="255" value="340" label="340.000000" color="#4797b5"/>
-              <item alpha="255" value="350" label="350.000000" color="#398db7"/>
-              <item alpha="255" value="360" label="360.000000" color="#2b83ba"/>
             </colorrampshader>
           </rastershader>
         </rasterrenderer>
@@ -345,7 +255,7 @@
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>Terreng 2, hilllshade 1</layername>
+      <layername>Terreng 2, hilllshade</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=utm +zone=33 +datum=WGS84 +units=m +no_defs</proj4>
@@ -384,52 +294,6 @@
         <rasterresampler maxOversampling="2"/>
       </pipe>
       <blendMode>6</blendMode>
-    </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-      <id>6900_2_10m_z33_slope0120150522151124822</id>
-      <datasource>./data/6900_2_10m_z33.slope01.gtiff</datasource>
-      <title></title>
-      <abstract></abstract>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>Terreng 2, slope 1m, gray</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=utm +zone=33 +datum=WGS84 +units=m +no_defs</proj4>
-          <srsid>3117</srsid>
-          <srid>32633</srid>
-          <authid>EPSG:32633</authid>
-          <description>WGS 84 / UTM zone 33N</description>
-          <projectionacronym>utm</projectionacronym>
-          <ellipsoidacronym>WGS84</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <customproperties>
-        <property key="identify/format" value="Value"/>
-      </customproperties>
-      <provider>gdal</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
-      </noData>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer gradient="WhiteToBlack" opacity="0.494118" alphaBand="-1" type="singlebandgray" grayBand="1">
-          <rasterTransparency/>
-          <contrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>58.051</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </contrastEnhancement>
-        </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
-      </pipe>
-      <blendMode>0</blendMode>
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <id>6900_3_10m_z3320150523130045234</id>
@@ -555,7 +419,53 @@
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <id>6900_4_10m_z33_hillshade0120150523143001078</id>
+      <datasource>./data/6900_4_10m_z33.hillshade01.gtiff</datasource>
+      <title></title>
+      <abstract></abstract>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Terreng 4, hillshade</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=utm +zone=33 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>3117</srsid>
+          <srid>32633</srid>
+          <authid>EPSG:32633</authid>
+          <description>WGS 84 / UTM zone 33N</description>
+          <projectionacronym>utm</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer gradient="BlackToWhite" opacity="1" alphaBand="-1" type="singlebandgray" grayBand="1">
+          <rasterTransparency/>
+          <contrastEnhancement>
+            <minValue>21</minValue>
+            <maxValue>248</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </contrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="3" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>6</blendMode>
+    </maplayer>
+    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>osm_buildings_0120150523134613294</id>
       <datasource>./data/shp/osm_buildings_01.shp</datasource>
       <title></title>
@@ -590,72 +500,6 @@
         <edittype widgetv2type="TextEdit" name="osm_way_id">
           <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="name">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="type">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="aeroway">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="amenity">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="admin_leve">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="barrier">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="boundary">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="building">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="craft">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="geological">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="historic">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="land_area">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="landuse">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="leisure">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="man_made">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="military">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="natural">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="office">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="place">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="shop">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="sport">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="tourism">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
         <edittype widgetv2type="TextEdit" name="other_tags">
           <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
         </edittype>
@@ -665,7 +509,7 @@
           <symbol alpha="1" type="fill" name="0">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0"/>
-              <prop k="color" v="255,127,0,255"/>
+              <prop k="color" v="204,204,204,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0"/>
@@ -849,10 +693,10 @@
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <featformsuppress>0</featformsuppress>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <editorlayout>generatedlayout</editorlayout>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
@@ -862,72 +706,6 @@
           <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="osm_way_id">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="name">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="type">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="aeroway">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="amenity">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="admin_leve">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="barrier">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="boundary">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="building">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="craft">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="geological">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="historic">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="land_area">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="landuse">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="leisure">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="man_made">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="military">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="natural">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="office">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="place">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="shop">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="sport">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="tourism">
           <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="other_tags">
