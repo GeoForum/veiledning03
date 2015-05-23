@@ -4,6 +4,8 @@ Vi skal lage en 3D visualisering av terrengmodell i desktop GIS. Det finnes en r
 
 Du kan hente [filene til denne veiledning på github](https://github.com/GeoForum/veiledning03) - eller du kan bygge strukturen opp selv.
 
+Se dette eksemplet <a href="http://geoforum.github.io/veiledning03/" target="_blank">live demo på github pages</a>. Følge evt [denne instruks](testserver.md) hvis du vil sette opp lokal test-server.
+
 ## QGIS og data
 Gå til http://www.qgis.org/en/site/forusers/download.html, last ned og installer QGIS. Det finnes til både Linux, Mac og Windows.
 
@@ -24,7 +26,7 @@ Data ligger nå i rå tekst-format som i filen [qgis/data/6900_2_10m_z33.dem](qg
 
 ## Raster data og 2.5D
 
-Terrengmodellen her  er raster data i motesettning til de forrige veiledninger, der vi jobbet med vektor data (som fx punkt, linje og polygon). Raster data er som et vanlig bilde - det består av rasters / pixels som kan have en eller flere verdier. I dette tilfelle er det en verdi for hver x-y-koordinat - nemlig en z-verdi (høyde). I et vanlig foto, er det tre verdier for hver koordinat - nemlig en verdi for rød, en for grønn og en for blå. Raster data kan inneholde hvor mange verdier som helst for hver koordinat - sattelit-bilder inneholder ofte opp til 20 verdier - også kallet bånd eller "bands". Å strukturere en terrengmodell på denne måten kallet 2.5D, da det reelt er et 2-dimensionellt koordinatsystem med den tredje koordinat - z-verdien - som attributt. "Ægte" 3D er fx et system med vektor objekter hvor alle punkter har 3 koordinater.
+Terrengmodellen her  er raster data i motesettning til de forrige veiledninger, der vi jobbet med vektor data (som fx punkt, linje og polygon). Raster data er som et vanlig bilde - det består av rasters / pixels som kan have en eller flere verdier. I dette tilfelle er det en verdi for hver x-y-koordinat - nemlig en z-verdi (høyde). I et vanlig foto, er det tre verdier for hver koordinat - nemlig en verdi for rød, en for grønn og en for blå. Raster data kan inneholde hvor mange verdier som helst for hver koordinat - sattelit-bilder inneholder ofte opp til 20 verdier - også kallet bånd eller "bands". Å strukturere en terrengmodell på denne måten kalles 2.5D, da det reelt er et 2-dimensionellt koordinatsystem med den tredje koordinat - z-verdien - som attributt. "Ægte" 3D er et koordinatsystem med 3 dimensioner og hvor alle objekter har 3 koordinater for hvert punkt.
 
 ## Rendering
 
@@ -37,7 +39,7 @@ En måte grei kartografisk metode til dette formålet er "pseudocolor".
 
 ![txt](img/350_q05b.jpg) ![txt](img/350_q05c.jpg)
 
-I det andre eksemple ovenfor er valgt en fargeskala fra grønt til brun fordelt på 16 intervaller fra 1-1600 meter over havet - i tillegg er en klasse lagt til manuellt med blå-farge for havet. Brukersnittet få frem ved å høyreklikke på laget og velge "properties" og "style":
+I det andre eksemple ovenfor er valgt en fargeskala fra grønt til brun fordelt på 16 intervaller fra 1-1600 meter over havet - i tillegg er en klasse lagt til manuellt med blå-farge for havet. Brukersnittet fås frem ved å høyreklikke på laget og velge "properties" og "style":
 
 ![txt](img/q06.png)
 
@@ -46,11 +48,11 @@ En annen kul måte å vise terreng på er vha hillshade.
 
 ![txt](img/350_q07b.jpg) 
 
-Velg fra QGIS menyen "Raster > Analysis > DEM" og bruk Mode = Hillshade. Det lages en analyse av terrengmodellen med utgangspunkt i lysets retning (azimuth og altiude) mv og output er en ny geotiff fil med data for skygge. 
+Velg fra QGIS menyen "Raster > Analysis > DEM" og bruk Mode = Hillshade. Det lages en analyse av terrengmodellen med utgangspunkt i lyskildens posisjon og retning (azimuth og altitude) mv og output er en ny geotiff fil med data for skygge. 
 
 ![txt](img/q07a.png) 
 
-Det ser litt rart ut vannet er farget gråt - bruk info-tool til å inspisere bildet til å bestemme hviklen verdi haveoverflaten har. Sett deretter no-data value til den verdien - prøv evt samtidig å sette global transparancy til 50%:
+Det ser litt rart ut at vannet er farget gråt - bruk info-tool til å inspisere bildet til å bestemme hviklen verdi haveoverflaten har. Sett deretter no-data value til den verdien - prøv evt samtidig å sette global transparancy til 50%:
 
 ![txt](img/q07c.png) ![txt](img/q07d.png)
 
@@ -89,26 +91,32 @@ Resultat lagres i en ny geotiff fil og ser slik ut - nye rasters vises med orang
 
 ![txt](img/350_q11c.jpg) 
 
-# 3D visning av bygninger
+# Data for bygninger
 
 Det er mulig å laste ned data fra Open Street Map (OSM) her:
 https://www.openstreetmap.org/export
 
 ![txt](img/q12b.png) 
 
-Data kommer i osm sitt xml-format som kan legges til QGIS direkte. Her var det blannet mye forskjellige objekttyper i data. Vi ønsker å sortere ut bygninger - åpen opp lagets attributt-tabell og klikk på "Select features using an expression" og sett sammen et passende uttrykk:
+Data kommer i osm sitt xml-format som kan legges til QGIS direkte. I dene OSM-filen er det blannet mye forskjellige objekttyper i data. Vi ønsker å sortere ut bygninger - åpen lagets attributt-tabell og klikk på "Select features using an expression" og sett sammen et passende uttrykk - fx:
+
+```sql
+"name" like '%building%'
+```
 
 ![txt](img/q12a.png) 
 
-Det er lurt å lLagre bygningene i separat fil, siden performance er mye bedre på fx shape-formatet enn på tekst-format som xml, json mv - og når man som her bruker et filter på data forringer det også performance. Høyreklikk på laget, velg "Save as", velg "Save only selected features":
+Det er lurt å lagre bygningene i en separat fil, siden performance er mye bedre på binære formater som fx shape enn på tekst-format som xml, json mv - og når man som her bruker et filter på data forringer det også performance. Høyreklikk på laget, velg "Save as", velg "Save only selected features":
 
 ![txt](img/q12c.png) 
 
-"Plugins > Manage and install plugins" - skriv "Qgis2ThreeJS" i søkefeltet og installer.
+# 3D visning
+
+For 3D-visning trenger vi en plugin til QGIS. Åpen "Plugins > Manage and install plugins" - skriv "Qgis2ThreeJS" i søkefeltet og installer. Du kan bruke prosjekt-filen [qgis/veiledning03b.qgs](qgis/veiledning03b.qgs) eller bygge opp egen.
 
 ![txt](img/q12e.png) 
 
-"Web > Qgis2ThreeJS > Qgis2ThreeJS" - velg korrekt DEM og Polygon lag til visning, sett fast højde som pygningene skal vises med:
+Aktiver plugin for å vise data: "Web > Qgis2ThreeJS > Qgis2ThreeJS" - velg korrekt DEM og Polygon lag til visning, sett fast høyde (fx 20m) som bygningene skal vises med:
 
 ![txt](img/q12f.png) 
 
@@ -116,5 +124,7 @@ Det er lurt å lLagre bygningene i separat fil, siden performance er mye bedre p
 
 Klikk på "run" og 3D-modellen kan vises i nettleseren:
 
-![txt](img/q12d.png) 
+![txt](img/q12d.jpg) 
+
+
 
