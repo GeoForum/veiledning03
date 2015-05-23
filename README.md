@@ -1,4 +1,4 @@
-# 3D i desktop GIS
+# Terrrengmodell i desktop GIS
 
 Vi skal lage en 3D visualisering av terrengmodell i desktop GIS. Det finnes en rekke avanserte GIS platforme til desktop. Tidligere har ESRI dominert markedet med [ArcGIS](http://www.esri.com/software/arcgis) - [MapInfo](http://www.mapinfo.com/) er også stor. Etterhvert har Open Source alternativene vokst seg store - blant de mest populære er [Quantum GIS / QGIS](http://www.qgis.org/en) og [GRASS GIS](http://grass.osgeo.org/).
 
@@ -22,13 +22,13 @@ Data ligger nå i rå tekst-format som i filen [qgis/data/6900_2_10m_z33.dem](qg
 
 ![txt](img/q01.png) ![txt](img/q02.png)
 
-## Raster data
+## Raster data og 2.5D
 
-Terrrengmodellen her er raster data i motesettning til de forrige veiledninger, hvor vi jobbet med vektor data. Raster data er som et vanlig bilde - det består av rasters / pixels som kan have en eller flere verdier. I dette tilfelle er det en verdi for hver x-y-koordinat - nemlig en z-verdi (høyde). I et vanlig foto, er det tre verdier for hver koordinat - nemlig en verdi for rød, en for grønn og en for blå. Raster data kan inneholde hvor mange verdier som helst for hver koordinat - sattelit-bilder inneholder ofte opp til 20 verdier - også kallet "band".
+Terrengmodellen her  er raster data i motesettning til de forrige veiledninger, der vi jobbet med vektor data (som fx punkt, linje og polygon). Raster data er som et vanlig bilde - det består av rasters / pixels som kan have en eller flere verdier. I dette tilfelle er det en verdi for hver x-y-koordinat - nemlig en z-verdi (høyde). I et vanlig foto, er det tre verdier for hver koordinat - nemlig en verdi for rød, en for grønn og en for blå. Raster data kan inneholde hvor mange verdier som helst for hver koordinat - sattelit-bilder inneholder ofte opp til 20 verdier - også kallet bånd eller "bands". Å strukturere en terrengmodell på denne måten kallet 2.5D, da det reelt er et 2-dimensionellt koordinatsystem med den tredje koordinat - z-verdien - som attributt. "Ægte" 3D er fx et system med vektor objekter hvor alle punkter har 3 koordinater.
 
 ## Rendering
 
-I utgangspunktet vil QGIS vise terrengmodellen i gråfarger, men det finnes naturligvis andre kule måter å vise det på. Hvis du høyreklikker på laget og velger "duplicate" vil du få fler lag som viser til samme datakilde. Det er en grei måte å teste forskjellige måter å vise samme data på - altså forskjellige typer af kartografi - også kallet "style" eller "symbology". Kartografi lagres ikke i datakilden. Utgangspunket er greyscale:
+I utgangspunktet vil QGIS vise terrengmodellen i gråfarger, men det finnes naturligvis andre kule måter å vise det på. Hvis du høyreklikker på laget og velger "duplicate" vil du få fler lag som viser til samme datakilde. Det er en grei måte å teste forskjellige måter å vise samme data på - altså forskjellige typer av kartografi - også kallet "style" eller "symbology". Kartografi lagres ikke i datakilden. Utgangspunket er greyscale:
 
 ![txt](img/350_q05a.jpg) 
 
@@ -85,7 +85,22 @@ AND "terreng, aspect 1, color@1" > 180
 AND "terreng, slope 1m, gray@1"  > 30 
 AND  "terreng, slope 1m, gray@1"  <  45
 ```
-Resultat ser slik ut:
+Resultat lagres i en ny geotiff fil og ser slik ut - nye rasters vises med orange:
 
-![txt](img/350_q11.jpg) 
+![txt](img/350_q11c.jpg) 
+
+# 3D visning av bygninger
+
+Det er mulig å laste ned data fra Open Street Map (OSM) her:
+https://www.openstreetmap.org/export
+
+![txt](img/q12b.png) 
+
+Data kommer i osm sitt xml-format som kan legges til QGIS direkte. Her var det blannet mye forskjellige objekttyper i data. Vi ønsker å sortere ut bygninger - åpen opp lagets attributt-tabell og klikk på "Select features using an expression" og sett sammen et passende uttrykk:
+
+![txt](img/q12a.png) 
+
+Det er lurt å lLagre bygningene i separat fil, siden performance er mye bedre på fx shape-formatet enn på tekst-format som xml, json mv - og når man som her bruker et filter på data forringer det også performance. Høyreklikk på laget, velg "Save as", velg "Save only selected features":
+
+![txt](img/q12c.png) 
 
