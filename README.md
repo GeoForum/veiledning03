@@ -1,4 +1,4 @@
-# Terrrengmodell i desktop GIS
+# Terrengmodell i desktop GIS
 
 Vi skal lage en 3D visualisering av terrengmodell i desktop GIS. Det finnes en rekke avanserte GIS platforme til desktop. Tidligere har ESRI dominert markedet med [ArcGIS](http://www.esri.com/software/arcgis) - [MapInfo](http://www.mapinfo.com/) er også stor. Etterhvert har Open Source alternativene vokst seg store - blant de mest populære er [Quantum GIS / QGIS](http://www.qgis.org/en) og [GRASS GIS](http://grass.osgeo.org/).
 
